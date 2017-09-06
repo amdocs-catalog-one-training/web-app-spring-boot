@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<!-- css -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{/css/custiom.css}" rel="stylesheet" />
+<!-- java scripts  -->
+<script type="text/javascript" th:src="@{/scripts/bootstrap.min.js}" />
+<title>registration</title>
+</head>
+<body>
+	<div class="container">
+		<div class="container">
+			<form action="#" th:action="@{/registration}" th:object="${regform}" method="post">
+				<div class="form-group row">
+					<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="inputEmail3" th:field="*{login}" placeholder="Email"></input>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" th:field="*{password}" placeholder="Password"></input>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="offset-sm-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Register</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
